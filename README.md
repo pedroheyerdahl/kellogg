@@ -24,5 +24,7 @@ After uploading the original file to Drive, each tab was copyied to a different 
 ## Loading into BigQuery
 After retrieving the Drive URI for each spreadsheet, a permanent table linked to the external data source was created using the bq command-line tool's `mk` command:
 ```
-bq mk --external_table_definition=@GOOGLE_SHEETS=https://docs.google.com/spreadsheets/d/1n4dAba8CmGCKxr70yf0Z7xO5xxdwO7iBTOecLRLgi2s/edit?usp=sharing kellogg.raw_zip_to_zip
+bq mk \
+--external_table_definition=@[SOURCE_FORMAT]=[DRIVE_URI] \
+DATASET.TABLE
 ```
