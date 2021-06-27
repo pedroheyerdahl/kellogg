@@ -21,6 +21,8 @@ in order to load the data to Bigquery, first it was neccessary to split each tab
 
 After uploading the original file to Drive, each tab was copyied to a different spreadsheet and later renamed accordingly.
 
+Any extra carriage returns were removed prior to loading in BQ, using regex 
+
 ## Loading into BigQuery
 After retrieving the Drive URI for each spreadsheet, a permanent table linked to the external data source was created using the bq command-line tool's `mk` command:
 ```
