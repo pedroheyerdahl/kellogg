@@ -30,3 +30,17 @@ bq mk \
 --external_table_definition=[SCHEMA]@[SOURCE_FORMAT]=[DRIVE_URI] \
 DATASET.TABLE
 ```
+```
+bq mk \
+--external_table_definition=Shipping_Warehouse:STRING,Assigned_Customer_Warehouse:STRING,Base_T_L_H_Nbr:INTEGER,SO____T_R_:STRING,Customer:INTEGER,custname:STRING,shipdate:DATE,Zip:STRING,Has_Stops_Over:BOOLEAN,_Contract__Freight_:STRING,_Freight_Amount_:STRING,_Discrepancy_Amount_:STRING,_Grand_Total_:STRING,T_L_H_Comments:STRING,Posted:STRING,Customer_PO_Number:STRING,Carrier:STRING,Shipment_:STRING,State:STRING@GOOGLE_SHEETS=https://docs.google.com/spreadsheets/d/1lHzmgg0C9kXHTFI3a5d_AORTB_CB7xTG44pIcvRGYGM/edit?usp=sharing \
+kellogg.raw_data
+
+bq mk \
+--external_table_definition=Shipping_Warehouse:STRING,Assigned_Customer_Warehouse:STRING,Base_T_L_H_Nbr:INTEGER,SO____T_R_:STRING,Customer:INTEGER,custname:STRING,shipdate:DATE,Zip:STRING,Has_Stops_Over:BOOLEAN,_Contract__Freight_:STRING,_Freight_Amount_:STRING,_Discrepancy_Amount_:STRING,_Grand_Total_:STRING,T_L_H_Comments:STRING,Posted:STRING,Customer_PO_Number:STRING,Carrier:STRING,Shipment_:STRING,State:STRING@GOOGLE_SHEETS=https://docs.google.com/spreadsheets/d/1n1km521AlxMzY8NmHPht4KnJXDtI_NQF3Imt_XP_1wY/edit?usp=sharing \
+kellogg.raw_accessorials
+
+
+bq mk \
+--external_table_definition=Ship_Zip:INTEGER,Deliver_Zip:INTEGER,_Grand_Total_:STRING,State:STRING,Customer:INTEGER,custname:STRING,shipdate:DATE,Has_Stops_Over:BOOLEAN,_Contract__Freight_:STRING,_Freight_Amount_:STRING,_Discrepancy_Amount_:STRING,T_L_H_Comments:STRING,Posted:BOOLEAN,Customer_PO_Number:STRING,Carrier:STRING,Shipment_:STRING@GOOGLE_SHEETS=https://docs.google.com/spreadsheets/d/1n4dAba8CmGCKxr70yf0Z7xO5xxdwO7iBTOecLRLgi2s/edit?usp=sharing \
+kellogg.raw_zip_to_zip
+```
