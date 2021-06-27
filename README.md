@@ -25,6 +25,6 @@ After uploading the original file to Drive, each tab was copyied to a different 
 After retrieving the Drive URI for each spreadsheet, a permanent table linked to the external data source was created using the bq command-line tool's `mk` command:
 ```
 bq mk \
---external_table_definition=@[SOURCE_FORMAT]=[DRIVE_URI] \
+--external_table_definition=[SCHEMA]@[SOURCE_FORMAT]=[DRIVE_URI] \
 DATASET.TABLE
 ```
