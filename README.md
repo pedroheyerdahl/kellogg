@@ -51,5 +51,22 @@ Finally, the external connection data is materialized into a native Bigquery tab
 
 ## Quality assessment
 Since the original file has three different tabs with duplicate columns, a script evaluates the summary of distinct and null counts for each dimension and the min-max ranges for each metric.
+
+|Column | Distinct | Null | Min | Max | Avg |
+|-------|----------|------|-----|-----|-----|
+|cust_id|2978|0|2800401|9905624|-|
+|cust_name|2978|0|-|-|
+|shipdate|0|0|2018-07-02|2021-06-21|-|
+|has_stops_over|2|0	|-|-|-|
+|contract_freight|335|48370|10|2000|464.68|
+|freight_amount|4195|2483|10|50000|500.51|
+|discrepancy_amount|2487|62079|0.04|4150|339.14|
+|grand_total|4634|0|23.14|50000|564.94|
+|was_posted|1|0|-|-|-|
+|cust_po|78173|3067|-|-|-|
+|carrier|392|2|-|-|-|
+|shipment|82323|0|-|-|-|
+|state|52|22|-|-|-|
+
 At this step, all of the metrics display a healthy amount of null values and min-max ranges.
-Since no discrepancies were found between tables, from this point on, the analysis is based exclusively on the zip_to_zip table.
+Since no discrepancies were found, with all columns having the same value across tables, from this point on, the analysis is based exclusively on the zip_to_zip table.
