@@ -44,3 +44,5 @@ bq mk \
 --external_table_definition=Ship_Zip:INTEGER,Deliver_Zip:INTEGER,_Grand_Total_:STRING,State:STRING,Customer:INTEGER,custname:STRING,shipdate:DATE,Has_Stops_Over:BOOLEAN,_Contract__Freight_:STRING,_Freight_Amount_:STRING,_Discrepancy_Amount_:STRING,T_L_H_Comments:STRING,Posted:BOOLEAN,Customer_PO_Number:STRING,Carrier:STRING,Shipment_:STRING@GOOGLE_SHEETS=https://docs.google.com/spreadsheets/d/1n4dAba8CmGCKxr70yf0Z7xO5xxdwO7iBTOecLRLgi2s/edit?usp=sharing \
 kellogg.raw_zip_to_zip
 ```
+Once the data is loaded into BQ, the first transformation step comprises a regex function to remove special characters from currency values, such as "$" and "-". This same function transform zeroed values to NULL. Next, the external connection data is loaded into a native bq table, to improve performance.
+
