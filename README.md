@@ -49,3 +49,7 @@ After loading the data into BQ, a regex function removes special characters from
 Next, duplicated shipments are discarded, and so are the rows with null 'grand_total' amounts. 
 Finally, the external connection data is materialized into a native Bigquery table with the project's default column naming convention.
 
+## Quality assessment
+Since the original file has three different tabs with duplicate columns, a script evaluates the summary of distinct and null counts for each dimension and the min-max ranges for each metric.
+At this step, all of the metrics display a healthy amount of null values and min-max ranges.
+Since no discrepancies were found between tables, from this point on, the analysis is based exclusively on the zip_to_zip table.
