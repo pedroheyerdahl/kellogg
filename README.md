@@ -45,7 +45,7 @@ bq mk \
 kellogg.raw_zip_to_zip
 ```
 ## Cleaning the data
-After loading the data into BQ, a regex function removes special characters from currency columns, such as "$" and -. This same function transforms zeroed values to NULL.
+After loading the data into BQ, a regex function removes special characters from currency columns, such as `$` and `-`. This same function transforms zeroed values to NULL.
 Next, duplicated shipments are discarded, and so are the rows with null 'grand_total' amounts. 
 Finally, the external connection data is materialized into a native Bigquery table with the project's default column naming convention.
 
