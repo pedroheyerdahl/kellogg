@@ -1,6 +1,7 @@
 
 # Kellogg Garden's Freights Geospatial Data Analysis in GCP
 Uncovering hidden patterns, improving predictive analysis and creating a competitive edge through location intelligence.
+
 From raw data to an interactive dashboard: how to load, clean, analyze and visualize a historical freight dataset
 
 ## Authors
