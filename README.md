@@ -1,5 +1,5 @@
 
-# Kellogg Garden's Freight Geospatial Data Analysis in GCP
+# Kellogg Garden's Freights Geospatial Data Analysis in GCP
 Uncovering hidden patterns, improving predictive analysis and creating a competitive edge through location intelligence.
 From raw data to an interactive dashboard: how to load, clean, analyze and visualize a historical freight dataset
 
@@ -77,5 +77,7 @@ At this step, all of the metrics display a healthy amount of null values and min
 Since no discrepancies were found, with all columns having the same value across tables, from this point on, the analysis is based almost exclusively on the zip_to_zip table. The only exception being the shipper_id, that will be joined from the accessorials table in the next step.
 
 ## Data enrichment
-Use location as the connective thread to uncover hidden patterns, improve predictive modeling, and create a competitive edge
-To run a geospatial analysis over the data, first we need to give it some geographical context, and the only field of the dataset that represents spatial information is the zipcode. Luckily Big Query has a public dataset on geo_us_boundaries, By joining the data with the zipwhich can easily be done by combining the zip code 
+
+To run a geospatial analysis over the data, first we need to give it some geographical context. The only field in the dataset that represents spatial information is the zipcode. Luckily, Big Query has a public us zip codes dataset on geo_us_boundaries, that enables geocoding each load to a specific origin and destination in space.
+
+By joining the data with the zipwhich can easily be done by combining the zip code 
