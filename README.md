@@ -81,14 +81,9 @@ Since no discrepancies were found, with all columns having the same value across
 
 ## Data enrichment
 
-To run a geospatial analysis over the data, first we need to give it some geographical context. The only field in the dataset that represents spatial information is the zipcode. Luckily, Big Query has a public us zip codes dataset on geo_us_boundaries, that enables geocoding each load to a specific origin and destination in space.
-
-Besides from geocoding the data, the `loads_locations` script accomplishes a few other things: 
-In this step the `shipper_id` field, absent in the `zip_to_zip` table, is joined from the `accessorials` table.
-Since the scope of the project is the analysis of ground transport, any overseas territory data is discarded. Consignees with inconsistent or bad zip code data are disconsidered.
-At the end of this step, the useful data drops from 82,323 loads to 76,655.
-
-Following the cleaning and enrichment, the data is finaly ready to be analyzed.
+To run a geospatial analysis over the data first, we need to give it some geographical context. The only field in the dataset that represents spatial information is the zip code. Luckily, Big Query has a public us zip codes dataset on geo_us_boundaries, enabling geocoding each load to a specific origin and destination in space.
+Besides geocoding the data, the loads_locations script accomplishes a few other things: In this step, the shipper_id field, absent in the zip_to_zip table, is joined from the accessorials table. Since the scope of the project is the analysis of ground transport, any overseas territory data is discarded. Consignees with inconsistent or bad zip code data are disregarded. At the end of this step, the point count drops from 82,323 to 76,655 loads.
+Following the cleaning and enrichment, the data is finally ready to be analyzed.
 
 ## Spatial Analysis
 
