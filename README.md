@@ -73,6 +73,7 @@ Since the original file has three different tabs with duplicate columns, a scrip
 | data         | 82323      | 2978                | null                | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... | 78173          | 3067           | 373           | 2             | 82323          | null           |
 | accessorials | 82323      | 2978                | null                | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... | 78173          | 3067           | 373           | 2             | 82323          | null           |
 | zip\_to\_zip | 82323      | 2978                | null                | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... | 78173          | 3067           | 373           | 2             | 82323          | null           |
+
 At this step, all of the metrics display a healthy amount of null values and min-max ranges (other than a suspect 50k final_price max value).
 Since no discrepancies were found, with all columns having the same value across tables, from this point on, the analysis is based almost exclusively on the zip_to_zip table. The only exception being the shipper_id, that will be joined from the accessorials table in the next step.
 
