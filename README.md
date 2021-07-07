@@ -68,11 +68,11 @@ Since the original file has three different tabs with duplicate columns, a scrip
 |load_id|82323|0|-|-|-|
 |state|52|22|-|-|-|
 
-| Table        | row\_count | dstc\_consignee\_id | ... | min\_shipped\_date | max\_shipped\_date | null\_final\_price | min\_final\_price | max\_final\_price | avg\_final\_price | ... | dstc\_cust\_po | null\_cust\_po | dstc\_carrier | null\_carrier | dstc\_load\_id |
-| ------------ | ---------- | -------------------  | --- | ------------------ | ------------------ | ------------------ | ----------------- | ----------------- | ----------------- | --- | -------------- | -------------- | ------------- | ------------- | -------------- |
-| data         | 82323      | 2978                | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... | 78173          | 3067           | 373           | 2             | 82323          |
-| accessorials | 82323      | 2978                | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... | 78173          | 3067           | 373           | 2             | 82323          |
-| zip\_to\_zip | 82323      | 2978                 | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... | 78173          | 3067           | 373           | 2             | 82323          |
+| Table        | row\_count | dstc\_consignee\_id | ... | min\_shipped\_date | max\_shipped\_date | null\_final\_price | min\_final\_price | max\_final\_price | avg\_final\_price | ... | dstc\_load\_id |
+| ------------ | ---------- | -------------------  | --- | ------------------ | ------------------ | ------------------ | ----------------- | ----------------- | ----------------- | --- | -------------- |
+| data         | 82323      | 2978                | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... |  82323          |
+| accessorials | 82323      | 2978                | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... | 82323          |
+| zip\_to\_zip | 82323      | 2978                 | ... | 02/07/2018         | 21/06/2021         | null               | 23.14             | 50000             | 564.94            | ... | 82323          |
 
 At this step, all of the metrics display a healthy amount of null values and min-max ranges (other than a suspect 50k final_price max value).
 Since no discrepancies were found, with all columns having the same value across tables, from this point on, the analysis is based almost exclusively on the zip_to_zip table. The only exception being the shipper_id, that will be joined from the accessorials table in the next step.
