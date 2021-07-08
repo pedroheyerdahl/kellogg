@@ -13,6 +13,9 @@ From raw data to an interactive dashboard: how to load, clean, analyze and visua
 - Loading in Bigquery
 - Cleaning the data
 - Data enrichment
+- Spatial Clustering
+- Weighted Spatial Averages
+- Visualization tools
 
 ## Exporting to csv
 
